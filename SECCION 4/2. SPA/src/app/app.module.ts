@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
+import {AboutComponent} from './components/about/about.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    HeroesComponent
+    HeroesComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
