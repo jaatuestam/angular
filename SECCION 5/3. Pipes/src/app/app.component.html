@@ -37,6 +37,81 @@
         <td>slice:4:8</td>
         <td>{{arreglo | slice :4:8}}</td>
       </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td> number : '3.0-0'</td>
+        <td>{{PI | number : '3.0-0'}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td> number : '1.0-2'</td>
+        <td>{{PI | number : '1.0-2'}}</td>
+      </tr>
+      <tr>
+        <td>{{a}}</td>
+        <td> percent </td>
+        <td>{{a | percent}}</td>
+      </tr>
+      <tr>
+        <td>{{a}}</td>
+        <td> percent:'2.2-4' </td>
+        <td>{{a | percent:'2.2-4'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td> currency </td>
+        <td>{{salario | currency}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>  currency:'EUR' </td>
+        <td>{{salario | currency:'EUR'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>  currency:'EUR':true </td>
+        <td>{{salario | currency:'EUR':true}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td> currency:'EUR':true:'4.0-0' </td>
+        <td>{{salario | currency:'EUR':true:'4.0-0'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td> number:'.2-2' </td>
+        <td>{{salario | number:'.2-2'}}</td>
+      </tr>
+      <tr>
+        <td>{{valorDePromesa}}</td>
+        <td> async </td>
+        <td>{{valorDePromesa | async}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td> date </td>
+        <td>{{fecha | date}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td> date :'medium' </td>
+        <td>{{fecha | date:'medium'}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td> date:'MMMM - dd' </td>
+        <td>{{fecha | date:'MMMM - dd'}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre2}}</td>
+        <td> capitalizado </td>
+        <td>{{nombre2|capitalizado}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre2}}</td>
+        <td> capitalizado </td>
+        <td>{{nombre2|capitalizado:false}}</td>
+      </tr>
     </tbody>
   </table>
 
@@ -44,5 +119,10 @@
   <ul >
     <li *ngFor="let item of arreglo | slice:5:20">{{item}}</li>
   </ul>
+
+  <h4>JSON</h4>
+  <pre>
+    {{equipo | json}}
+  </pre>
 
 </div>
