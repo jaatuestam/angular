@@ -112,6 +112,18 @@
         <td> capitalizado </td>
         <td>{{nombre2|capitalizado:false}}</td>
       </tr>
+      <tr>
+        <td>{{contrasena}}</td>
+        <td> contrasena : {{mostrar}}
+          <br>
+          <button type="button" name="button"
+            class="btn btn-outline-primary" (click) = "mostrar = !mostrar">
+            Mostrar/Ocultar
+          </button>
+
+        </td>
+        <td>{{contrasena|contrasena:mostrar}}</td>
+      </tr>
     </tbody>
   </table>
 

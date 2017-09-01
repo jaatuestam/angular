@@ -35,4 +35,8 @@ export class AppComponent {
   fecha = new Date();
 
   video = "Hupj8qXuOLI";
+
+  contrasena = "union123";
+
+  mostrar = true;
 }
