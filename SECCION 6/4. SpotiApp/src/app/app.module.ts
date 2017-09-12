@@ -7,6 +7,7 @@ import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
 import {APP_ROUTING} from './app.routes';
 import {SpotifyService} from './services/spotify.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {SpotifyService} from './services/spotify.service';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    HttpModule
   ],
   providers: [
   SpotifyService],
