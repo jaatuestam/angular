@@ -9,13 +9,17 @@ import {APP_ROUTING} from './app.routes';
 import {SpotifyService} from './services/spotify.service';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SinfotoPipe } from './pipes/sinfoto.pipe';
+import { ArtistaComponent } from './components/artista/artista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
-    NavbarComponent
+    NavbarComponent,
+    SinfotoPipe,
+    ArtistaComponent
   ],
   imports: [
     BrowserModule,
