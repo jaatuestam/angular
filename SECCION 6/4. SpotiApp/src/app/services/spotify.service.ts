@@ -8,12 +8,14 @@ export class SpotifyService {
   artistas:any[] = [];
   urlBusqueda:string = "https://api.spotify.com/v1/search";
   urlArtista:string = "https://api.spotify.com/v1/artists/"
+  codigo:string = "BQBYI-YHadbjtDok5ec-Ho9oi-XOheKRdUiXNolXHGYsVNP6oIvxUNIoZwLwTTuAwe6ug33yEVAlpGZjadOHNw"
 
   constructor(private http:Http) { }
 
+
   getArtistas(termino : string){
     let headers = new Headers();
-    headers.append('authorization', 'Bearer BQBBQlA0uNnx4PCggzMXFMWvRKSl7qrw6uYLjr14cYs3US1zXkunUxJzA7arXwN8PjWGYK9J7eDQXIAxMa0wkA')
+    headers.append('authorization', `Bearer ${this.codigo}`)
     let query = `?q=${termino}&type=artist`;
     let url = this.urlBusqueda + query;
 
@@ -28,12 +30,12 @@ export class SpotifyService {
 
   getArtista(id:string){
     let headers = new Headers();
-    headers.append('authorization', 'Bearer BQBBQlA0uNnx4PCggzMXFMWvRKSl7qrw6uYLjr14cYs3US1zXkunUxJzA7arXwN8PjWGYK9J7eDQXIAxMa0wkA')
+    headers.append('authorization', `Bearer ${this.codigo}`)
     let query = `${id}`;
     let url = this.urlArtista + query;
 
     return this.http.get(url,{headers}).map(res => {
-      // console.log(res.json() );
+      console.log(res.json() );
       // this.artistas = res.json().artists.items;
       return res.json();
 
@@ -42,7 +44,7 @@ export class SpotifyService {
 
   getTop(id:string){
     let headers = new Headers();
-    headers.append('authorization', 'Bearer BQBBQlA0uNnx4PCggzMXFMWvRKSl7qrw6uYLjr14cYs3US1zXkunUxJzA7arXwN8PjWGYK9J7eDQXIAxMa0wkA')
+    headers.append('authorization', `Bearer ${this.codigo}`)
     let query = `${id}/top-tracks?country=US`;
     let url = this.urlArtista + query;
 
