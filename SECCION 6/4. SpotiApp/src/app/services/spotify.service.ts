@@ -8,7 +8,7 @@ export class SpotifyService {
   artistas:any[] = [];
   urlBusqueda:string = "https://api.spotify.com/v1/search";
   urlArtista:string = "https://api.spotify.com/v1/artists/"
-  codigo:string = "BQBYI-YHadbjtDok5ec-Ho9oi-XOheKRdUiXNolXHGYsVNP6oIvxUNIoZwLwTTuAwe6ug33yEVAlpGZjadOHNw"
+  codigo:string = "BQDEJbNynblLRWMLzp3zByRDODPIU9VHGpABiuvlwaEM9Ls-3zNBvoCWAZhk_shi3P8zSeqKJNmuNCFhsv9-DQ"
 
   constructor(private http:Http) { }
 
