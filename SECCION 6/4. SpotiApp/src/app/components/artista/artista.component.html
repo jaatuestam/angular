@@ -1,14 +1,14 @@
 <div *ngIf="artista" class="main-container animated fadeIn fast">
   <div class="row">
     <div class="col-md-3">
-      <img [src]="artista.images | sinfoto"  class="img-thumbnail img-circle">
+      <img [src]="artista.images | sinfoto"  class="img-fluid img-circle">
     </div>
 
     <div class="col-md-9">
       <h3>{{artista.name}} <small>{{artista.popularity}}</small></h3>
-      <!-- <hr>
+      <hr>
       <a [href]="artista.external_urls?.spotify" class="btn btn-outline-success"> Ver Pagina</a>
-      <a [routerLink] = ['/buscar'] class="btn btn-outline-danger"> Regresar</a> -->
+      <a [routerLink] = "['/buscar']" class="btn btn-outline-danger"> Regresar</a>
     </div>
   </div>
 
@@ -33,11 +33,11 @@
           </thead>
           <tbody>
             <tr *ngFor="let pista of pistas; let i = index ">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>{{i+1}}</td>
+              <td><img [src]="pista.album.images | sinfoto" alt=""></td>
+              <td>{{pista.name}}</td>
+              <td>{{pista.popularity}}</td>
+              <td><a [href]=pista.preview_url>Preview</a></td>
 
             </tr>
           </tbody>
