@@ -41,9 +41,15 @@ hr{
 
 .img-circle{
   border-radius: 100%;
-  margin-left: 64%;
 }
 
+.margin-64{
+  margin-left: 64%
+}
+.img-50{
+  height: 50px;
+  width: 50px;
+}
 
 /* Animaciones */
 .animated {
