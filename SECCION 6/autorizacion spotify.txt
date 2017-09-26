@@ -1,0 +1,12 @@
+Client ID
+
+8f68900e3c3a40c6b6a07cb675c86627
+Client Secret
+
+1ea536278cd446eebc053e2629bc546d
+
+{
+  "access_token": "BQBJRP7TN2FtN7RgYMLXctEbxdOKA4045u00hGIwF4ndYRx7OgCJKJMCEJXmMPNxh6XY8hrzeDVU68WbYI5iQw",
+  "token_type": "Bearer",
+  "expires_in": 3600
+}
