@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import {APP_ROUTING} from './app.routes';
 
 import {AuthService} from './services/auth.service';
+import {AuthGuardService} from './services/auth-guard.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -24,7 +25,8 @@ import { ProtegidaComponent } from './components/protegida/protegida.component';
     APP_ROUTING
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
