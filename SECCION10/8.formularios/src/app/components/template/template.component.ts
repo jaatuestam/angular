@@ -15,8 +15,12 @@ export class TemplateComponent  {
     nombre: null,
     apellido : null,
     correo: null,
-    pais:""
+    pais:"",
+    sexo:"Hombre",
+    acepta:false
   }
+
+  sexos : string[]=["Hombre", "Mujer","Sin definir"];
 
   paises =[
     {
