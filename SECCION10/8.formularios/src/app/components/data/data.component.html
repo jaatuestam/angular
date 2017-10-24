@@ -2,7 +2,7 @@
 <hr>
 <form [formGroup]="forma" (ngSubmit) = "guardarCambios()">
 
-  <div>
+  <div formGroupName = "nombrecompleto">
 
     <div class="form-group row">
       <label class="col-2 col-form-label">Nombre</label>
@@ -10,12 +10,13 @@
 
         <input class="form-control"
                type="text"
+              [ngClass]="{'is-invalid':forma.controls['nombrecompleto'].controls['nombre'].errors!=null && forma.controls['nombrecompleto'].controls['nombre'].touched, 'is-valid':forma.controls['nombrecompleto'].controls['nombre'].errors==null && forma.controls['nombrecompleto'].controls['nombre'].touched}"
                formControlName="nombre"
                placeholder="Nombre">
-        <div class="form-control-feedback" *ngIf="forma.controls['nombre'].errors?.required">
+        <div class="form-control-feedback" *ngIf="forma.get('nombrecompleto.nombre').errors?.required">
           El nombre es obligatorio
         </div>
-        <div class="form-control-feedback" *ngIf="forma.controls['nombre'].errors?.minLength">
+        <div class="form-control-feedback" *ngIf="forma.get('nombrecompleto.nombre').errors?.minlength">
           Por lo menos 3 caracteres
         </div>
       </div>
