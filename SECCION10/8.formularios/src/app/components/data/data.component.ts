@@ -23,7 +23,7 @@ export class DataComponent {
 
       'nombrecompleto' : new FormGroup({
         'nombre' : new FormControl('',[Validators.required,Validators.minLength(3)]),
-        'apellido' : new FormControl('',Validators.required)
+        'apellido' : new FormControl('',[Validators.required,this.noHomero])
       }),
       'correo' : new FormControl('',[Validators.required,
                                     Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
@@ -39,13 +39,22 @@ export class DataComponent {
   guardarCambios(){
     console.log(this.forma.value);
     console.log(this.forma);
-    this.forma.reset({
-      nombrecompleto : {
-        nombre : "",
-        apellido : ""
-      },
-      correo : "nuevocorre@corre.com"
-    });
+    // this.forma.reset({
+    //   nombrecompleto : {
+    //     nombre : "",
+    //     apellido : ""
+    //   },
+    //   correo : "nuevocorre@corre.com"
+    // });
+  }
+
+  noHomero(control:FormControl):{[s:string]:boolean}{
+    if(control.value === "homero"){
+      return{
+        noHomero:false
+      }
+    }
+    return null;
   }
 
   agregarPasatiempo(){
