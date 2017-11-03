@@ -6,7 +6,7 @@ import  'rxjs/Rx';
 @Injectable()
 export class HeroesService {
 
-  fireURL : string = "https://heroesapp-7328f.firebaseio.com/Heroes.json";
+  heroesURL : string = "https://heroesapp-7328f.firebaseio.com/Heroes.json";
   heroeURL : string = "https://heroesapp-7328f.firebaseio.com/Heroes/";
 
   constructor(private http:Http) { }
@@ -16,7 +16,7 @@ export class HeroesService {
     let header = new Headers({
       'Content-Type' : "application/json"
     });
-    return this.http.post(this.fireURL,body,header).map(res=>{
+    return this.http.post(this.heroesURL,body,header).map(res=>{
       console.log(res.json());
       return res.json();
     });
@@ -37,6 +37,15 @@ export class HeroesService {
   getHeroe(key$:string){
     let url = `${this.heroeURL}/${key$}.json`;
     return this.http.get(url).map(res => res.json());
+  }
+
+  getHeroes(){
+    return this.http.get(this.heroesURL).map(res => res.json());
+  }
+
+  eliminarHeroe(key$:string){
+    let url = `${this.heroeURL}/${key$}.json`;
+    return this.http.delete(url).map(res => res.json());
   }
 
 }
