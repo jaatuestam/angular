@@ -1,0 +1,79 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Peliculas App</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam error harum enim sunt ea nemo, perspiciatis fugiat sint minus consectetur accusantium ratione velit, repellendus rerum magni dicta quas quae molestiae.</p>
+  </div>
+</div>
+
+
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<!-- <div class="row">
+  <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div> -->
+
+<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<!-- <div class="row">
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div> -->
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<!-- <div class="row">
+  <div class="col-6">.col-6</div>
+  <div class="col-6">.col-6</div>
+</div> -->
+
+
+<div class="container">
+  <h1>Cartelera</h1>
+  <hr>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-md-12 div-pic-1"
+          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 div-pic-2"
+          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
+        </div>
+        <div class="col-sm-6 div-pic-2"
+          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6 div-pic-2"
+          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
+        </div>
+        <div class="col-sm-6 div-pic-2"
+          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 div-pic-1"
+          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<h2>Peliculas populares</h2>
+<!-- <div class="gal"> -->
+  <div class="card-columns">
+  <div class="card  animated fadeIn fast" *ngFor="let popular of populares" (click) = "verDetalle(popular.id)">
+    <img [src]="popular.backdrop_path | imagen" [alt]="popular.original_title">
+    <div class="card-body">
+      <h6 class="card-title">{{popular.original_title}}</h6>
+    </div>
+  <!-- </div> -->
+</div>
+</div>
