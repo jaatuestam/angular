@@ -16,6 +16,7 @@ import { DetalleComponent } from './components/detalle/detalle.component';
 import { SearchComponent } from './components/search/search.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
+import { GaleriaComponent } from './components/home/galeria.component';
 
 
 
@@ -27,7 +28,8 @@ import { ImagenPipe } from './pipes/imagen.pipe';
     DetalleComponent,
     SearchComponent,
     BusquedaComponent,
-    ImagenPipe
+    ImagenPipe,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,

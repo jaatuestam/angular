@@ -5,12 +5,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ImagenPipe implements PipeTransform {
 
-  transform(value: string): string {
-    let noimage = "assets/noimage.png";
-    if(!value){
-      return noimage;
+  transform(pelicula:any): any {
+    let url = "https://image.tmdb.org/t/p/w600"
+    if(pelicula.backdrop_path){
+      return url + pelicula.backdrop_path;
     }
-    return `https://image.tmdb.org/t/p/w300${value}`;
+    if(pelicula.poster_path){
+      return url + pelicula.poster_path;
+    }
+    let noimage = "assets/noimage.png";
+    return noimage;
+
+    // return `https://image.tmdb.org/t/p/w300${value}`;
   }
 
 }

@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   public populares : Pelicula[] = [];
   public popularesKids : Pelicula[] = [];
-  public teatros : Pelicula[] = [];
+  public teatros : Pelicula[] = null;
   private urlImagen : string = "http//image.tmdb.org/t/p/w300";
 
   constructor(private _ps:PeliculasService ){

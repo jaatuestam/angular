@@ -27,53 +27,7 @@
 
 
 <div class="container">
-  <h1>Cartelera</h1>
-  <hr>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="row">
-        <div class="col-md-12 div-pic-1"
-          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 div-pic-2"
-          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
-        </div>
-        <div class="col-sm-6 div-pic-2"
-          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="row">
-        <div class="col-sm-6 div-pic-2"
-          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
-        </div>
-        <div class="col-sm-6 div-pic-2"
-          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12 div-pic-1"
-          [ngStyle]="{'background-image':'url(https://image.tmdb.org/t/p/w300/tcheoA2nPATCm2vvXw2hVQoaEFD.jpg)'}">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-<h2>Peliculas populares</h2>
-<!-- <div class="gal"> -->
-  <div class="card-columns">
-  <div class="card  animated fadeIn fast" *ngFor="let popular of populares" (click) = "verDetalle(popular.id)">
-    <img [src]="popular.backdrop_path | imagen" [alt]="popular.original_title">
-    <div class="card-body">
-      <h6 class="card-title">{{popular.original_title}}</h6>
-    </div>
-  <!-- </div> -->
-</div>
+  <app-galeria [peliculas] =  "teatros|slice:0:6" titulo= "Peliculas en cartelera"></app-galeria>
+  <app-galeria [peliculas] =  "populares|slice:0:6" titulo= "Peliculas populares"></app-galeria>
+  <app-galeria [peliculas] =  "popularesKids|slice:0:6" titulo= "Peliculas populares en los niños"></app-galeria>
 </div>
