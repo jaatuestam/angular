@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Pelicula } from '../../interfaces/pelicula.interface';
+import { ActivatedRoute } from '@angular/router';
+import { PeliculasService } from '../../providers/peliculas.service';
 
 @Component({
   selector: 'app-detalle',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleComponent implements OnInit {
 
-  constructor() { }
+  pelicula:Pelicula;
+
+  constructor(private peliculaService : PeliculasService, private activatedRoute:ActivatedRoute) {
+    this.activatedRoute.params.subscribe(parametros => {
+        console.log(parametros);
+    });
+  }
 
   ngOnInit() {
   }
+
+
 
 }
