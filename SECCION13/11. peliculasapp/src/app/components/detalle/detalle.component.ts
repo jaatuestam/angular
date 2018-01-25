@@ -14,7 +14,10 @@ export class DetalleComponent implements OnInit {
 
   constructor(private peliculaService : PeliculasService, private activatedRoute:ActivatedRoute) {
     this.activatedRoute.params.subscribe(parametros => {
-        console.log(parametros);
+        this.peliculaService.obtenerDetalle(parametros['id']).subscribe( pelicula => {
+          console.log(pelicula);
+          this.pelicula = pelicula;
+        })
     });
   }
 
