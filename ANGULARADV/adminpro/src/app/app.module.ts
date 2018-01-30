@@ -13,6 +13,7 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 
 /*Rutas*/
 import {APP_ROUTING} from './app.routes';
+import { PagesComponent } from './pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {APP_ROUTING} from './app.routes';
     Graficas1Component,
     HeaderComponent,
     SidebarComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,
