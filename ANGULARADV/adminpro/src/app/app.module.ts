@@ -14,6 +14,7 @@ import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 /*Rutas*/
 import {APP_ROUTING} from './app.routes';
 import { PagesComponent } from './pages/pages.component';
+import { RegisterComponent } from './login/register.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PagesComponent } from './pages/pages.component';
     HeaderComponent,
     SidebarComponent,
     BreadcrumbComponent,
-    PagesComponent
+    PagesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
