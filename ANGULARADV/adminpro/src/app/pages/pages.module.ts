@@ -9,6 +9,7 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 
 //Routes
 import  { PAGES_ROUTES } from './pages.routes';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import  { PAGES_ROUTES } from './pages.routes';
     DashboardComponent,
     ProgressComponent,
     Graficas1Component,
-    IncrementadorComponent
+    IncrementadorComponent,
+    AccountSettingsComponent
   ],
   imports: [
     SharedModule,
