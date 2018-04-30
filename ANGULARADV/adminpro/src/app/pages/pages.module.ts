@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CommonModule } from "@angular/common";
 import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { PagesComponent } from './pages.component';
@@ -14,7 +15,7 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 
 import { ChartsModule } from 'ng2-charts';
-import { GraficaDonaComponent } from './graficas1/grafica-dona.component';
+import { GraficaDonaComponent } from '../components/grafico-dona/grafica-dona.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { GraficaDonaComponent } from './graficas1/grafica-dona.component';
     SharedModule,
     PAGES_ROUTES,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    CommonModule
   ],
   exports: [
     DashboardComponent,
