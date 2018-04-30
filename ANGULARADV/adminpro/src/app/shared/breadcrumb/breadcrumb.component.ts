@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BreadcrumbComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) {
+    this.router.events
+    .subscribe(evento =>{
+      console.log(evento)
+    });
+  }
 
   ngOnInit() {
   }
