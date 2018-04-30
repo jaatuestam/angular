@@ -28,12 +28,12 @@ export class PromesasComponent implements OnInit {
         contador +=1;
         console.log(contador);
         if(contador === 3){
-          resolve('Funciono bien');
+          resolve(true);
           // reject('Se revento');
           clearInterval(intervalo);
         }
       },1000);
-    });    
+    });
   }
 
 }
