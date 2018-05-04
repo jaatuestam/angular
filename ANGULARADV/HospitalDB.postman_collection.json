@@ -1,0 +1,21 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HospitalDB",
+		"_postman_id": "afb6130e-53b8-3e10-59da-1113bc27b15a",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "usuario:consultar todos los usuarios",
+			"request": {
+				"url": "localhost:3000/usuario",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
