@@ -35,7 +35,7 @@ app.get('/', (req, res, next) => {
 //========================================
 //actualizar un nuevo usuario
 //========================================
-app.put('/:id',(req,res) =>{
+app.put('/:id',middlewareAutenticacion.verificaToken,(req,res) =>{
 
   var id = req.params.id;
   var body = req.body;
@@ -116,7 +116,7 @@ app.post('/',middlewareAutenticacion.verificaToken,(req,res) =>{
 //========================================
 //borrar un usuario por el id
 //========================================
-app.delete('/:usuario_borrar',(req,res)=>{
+app.delete('/:usuario_borrar',middlewareAutenticacion.verificaToken,(req,res)=>{
   var id = req.params.usuario_borrar;
 
   Usuario.findByIdAndRemove(id, (err, usuarioBorrado)=>{
