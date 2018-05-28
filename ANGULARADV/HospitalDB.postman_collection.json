@@ -3,6 +3,7 @@
 	"info": {
 		"name": "HospitalDB",
 		"_postman_id": "afb6130e-53b8-3e10-59da-1113bc27b15a",
+		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -13,6 +14,162 @@
 				"method": "GET",
 				"header": [],
 				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "usuario:insertar un usuario",
+			"request": {
+				"url": "localhost:3000/usuario?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1MjY5NDA2NzgsImV4cCI6MTUyNjk1NTA3OH0.NQdkLvqrX_jmPt0LACV4M7Nz-KkQYB9OmdGY5GyZIfw",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "test1",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "email",
+							"value": "test1@test.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "role",
+							"value": "ADMIN_ROLE",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "usuario:actualizar un usuario",
+			"request": {
+				"url": "localhost:3000/usuario/5b033b776f53a92c97d89e92?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoidGVzdDEiLCJlbWFpbCI6InRlc3QxQHRlc3QuY29tIiwicGFzc3dvcmQiOiI6UyIsIl9fdiI6MH0sImlhdCI6MTUyNjk0MDA3NCwiZXhwIjoxNTI2OTU0NDc0fQ.bLVXkxf0P-rRtKzPZ852c70tcQAmaJRv1fOCQm-BjDU",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "nuevo test w",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "email",
+							"value": "test1@test.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "role",
+							"value": "ADMIN_ROLE",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "usuario:borrar un usuario",
+			"request": {
+				"url": "localhost:3000/usuario/5afb5cea2442214255d6e001",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "login:login de usuario",
+			"request": {
+				"url": "localhost:3000/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "test1@test.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
 				"description": ""
 			},
 			"response": []
