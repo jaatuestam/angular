@@ -11,7 +11,10 @@ var Medico = require('../models/medico');
 //========================================
 app.get('/', (req,res) =>{
 
-  Medico.find({}, 'nombre img hospital').exec(
+  Medico.find({})
+    .populate('usuario', 'nombre email')
+    .populate('hospital')
+    .exec(
     (err,medicos) => {
         if(err){
           return res.status(500).json({
@@ -53,7 +56,7 @@ app.put('/:id', middlewareAutenticacion.verificaToken ,(req, res) =>{
     }
 
     medico.nombre = body.nombre;
-    medico.img = body.img;
+    medico.usuario = req.usuario;
     medico.hospital = body.hospital;
 
     medico.save((err, medicoGuardado) => {

@@ -10,20 +10,22 @@ var Hospital = require('../models/hospital');
 //obtener todos los hospitales
 //========================================
 app.get('/', (req, res) => {
-  Hospital.find({}).exec(
-    (err, hospitales) => {
-      if (err) {
-        return res.status(500).json({
-          ok: false,
-          mensaje: 'Error al consultar hospitales',
-          errores: err
-        });
-      }
+  Hospital.find({})
+    .populate('usuario', 'nombre email')
+    .exec(
+      (err, hospitales) => {
+        if (err) {
+          return res.status(500).json({
+            ok: false,
+            mensaje: 'Error al consultar hospitales',
+            errores: err
+          });
+        }
 
-      res.status(200).json({
-        ok: true,
-        hospitales: hospitales
-      });
+        res.status(200).json({
+          ok: true,
+          hospitales: hospitales
+        });
 
     });
 });
@@ -84,7 +86,7 @@ app.post('/', middlewareAutenticacion.verificaToken, (req, res) => {
 
   var hospital = new Hospital({
     nombre: body.nombre,
-    usuario: req.usuario.id
+    usuario: req.usuario
   });
 
   hospital.save((err, hospitalGuardado) => {
@@ -98,8 +100,7 @@ app.post('/', middlewareAutenticacion.verificaToken, (req, res) => {
 
     res.status(201).json({
       ok: true,
-      usuario: hospitalGuardado,
-      usuariotoken: req.usuario
+      usuario: hospitalGuardado
     });
 
   });
