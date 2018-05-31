@@ -10,7 +10,7 @@
 		{
 			"name": "usuario:consultar todos los usuarios",
 			"request": {
-				"url": "localhost:3000/usuario",
+				"url": "localhost:3000/usuario?desde=10",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -21,7 +21,7 @@
 		{
 			"name": "usuario:insertar un usuario",
 			"request": {
-				"url": "localhost:3000/usuario?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1MjY5NDA2NzgsImV4cCI6MTUyNjk1NTA3OH0.NQdkLvqrX_jmPt0LACV4M7Nz-KkQYB9OmdGY5GyZIfw",
+				"url": "localhost:3000/usuario?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1Mjc3MTc2NTcsImV4cCI6MTUyNzczMjA1N30.wmhlTlGaIKLs_Xgr6GpKrhDREHdOgsfN5f6ePxcVInM",
 				"method": "POST",
 				"header": [
 					{
@@ -35,13 +35,13 @@
 					"urlencoded": [
 						{
 							"key": "nombre",
-							"value": "test1",
+							"value": "test15",
 							"type": "text",
 							"enabled": true
 						},
 						{
 							"key": "email",
-							"value": "test1@test.com",
+							"value": "test15@test.com",
 							"type": "text",
 							"enabled": true
 						},
@@ -55,7 +55,7 @@
 							"key": "role",
 							"value": "ADMIN_ROLE",
 							"type": "text",
-							"enabled": true
+							"enabled": false
 						},
 						{
 							"key": "",
@@ -165,6 +165,232 @@
 						{
 							"key": "password",
 							"value": "123456",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "hospital:consultar todos los hospitales",
+			"request": {
+				"url": "localhost:3000/hospital?desde=0",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "hospital:insertar un hospital",
+			"request": {
+				"url": "localhost:3000/hospital?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1Mjc1MzMwNDcsImV4cCI6MTUyNzU0NzQ0N30.q22j-TNuuYiBdpZWpiJ26RTgBiHlw0KO29ul2wXWoLU",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "hospital 1",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "img",
+							"value": "imagen",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "hospital:actualizar un hospital",
+			"request": {
+				"url": "localhost:3000/hospital/5b0c4e8d0952733ce3508f91?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1Mjc1MzMwNDcsImV4cCI6MTUyNzU0NzQ0N30.q22j-TNuuYiBdpZWpiJ26RTgBiHlw0KO29ul2wXWoLU",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "hospital 2",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "hospital:borrar un hospital",
+			"request": {
+				"url": "localhost:3000/hospital/5b0c4e8d0952733ce3508f91?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1Mjc1MzMwNDcsImV4cCI6MTUyNzU0NzQ0N30.q22j-TNuuYiBdpZWpiJ26RTgBiHlw0KO29ul2wXWoLU",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "medico:consultar todos los medicos",
+			"request": {
+				"url": "localhost:3000/medico?desde=0",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "medico:insertar un medico",
+			"request": {
+				"url": "localhost:3000/medico?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1Mjc3MTY5NzcsImV4cCI6MTUyNzczMTM3N30.K00mtTANmQxOgR0kiun7TEL1YUQgxlxApyojLCkWK04",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "medico 4",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "hospital",
+							"value": "5b0f1fedd986ff424c8d7873",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "medico:actualizar un medico",
+			"request": {
+				"url": "localhost:3000/medico/5b0c84cabee80f5947e4e52f?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1Mjc1MzMwNDcsImV4cCI6MTUyNzU0NzQ0N30.q22j-TNuuYiBdpZWpiJ26RTgBiHlw0KO29ul2wXWoLU",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "medico 2",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "hospital",
+							"value": "5b0c4e4d4bcc923b6a5fa6e5",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "img",
+							"value": "imagen",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "medico:borrar un medico",
+			"request": {
+				"url": "localhost:3000/medico/5b0c85762f10d55a6d9f2b44?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1Mjc1MzMwNDcsImV4cCI6MTUyNzU0NzQ0N30.q22j-TNuuYiBdpZWpiJ26RTgBiHlw0KO29ul2wXWoLU",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
 							"type": "text",
 							"enabled": true
 						}
