@@ -188,7 +188,7 @@
 		{
 			"name": "hospital:insertar un hospital",
 			"request": {
-				"url": "localhost:3000/hospital?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1Mjc1MzMwNDcsImV4cCI6MTUyNzU0NzQ0N30.q22j-TNuuYiBdpZWpiJ26RTgBiHlw0KO29ul2wXWoLU",
+				"url": "localhost:3000/hospital?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiX2lkIjoiNWIwMzNiNzc2ZjUzYTkyYzk3ZDg5ZTkyIiwibm9tYnJlIjoibnVldm8gdGVzdCB3IiwiZW1haWwiOiJ0ZXN0MUB0ZXN0LmNvbSIsInBhc3N3b3JkIjoiOlMiLCJfX3YiOjB9LCJpYXQiOjE1MzIzODQzMzAsImV4cCI6MTUzMjM5ODczMH0.4vkLdNbAFJc3EOw6_Pnj6LTmQvdHSs6YbeeeDu6BoZg",
 				"method": "POST",
 				"header": [
 					{
