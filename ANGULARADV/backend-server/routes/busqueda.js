@@ -6,15 +6,19 @@ var Hospital = require('../models/hospital');
 var Medico = require('../models/medico');
 var Usuario = require('../models/usuario');
 
+
+//==============================================
+// Busqueda general
+//==============================================
 app.get ('/todo/:busqueda',(req,res,next) => {
 
   var busqueda = req.params.busqueda;
 
   var regex = new RegExp(busqueda, 'i');
 
-  Promise.all([buscarHospitales(busqueda,regex),
-              buscarMedicos(busqueda, regex),
-              buscarUsuarios(busqueda, regex)
+  Promise.all([buscarHospitales(regex),
+              buscarMedicos(regex),
+              buscarUsuarios(regex)
             ]).then(respuesta =>{
               res.status(200).json({
                 ok:true,
@@ -25,8 +29,47 @@ app.get ('/todo/:busqueda',(req,res,next) => {
             });
 });
 
+//==============================================
+// Busqueda por coleccion
+//==============================================
+app.get('/coleccion/:tabla/:busqueda',(req,res) =>{
+  var tabla = req.params.tabla;
+  var busqueda = req.params.busqueda;
 
-function buscarHospitales(busqueda, regex){
+  var regex = new RegExp(busqueda, 'i');
+
+  if(tabla === 'usuario'){
+    buscarUsuarios(regex).then(usuarios =>{
+      res.status(200).json({
+        ok:true,
+        usuarios:usuarios
+      });
+    });
+  }
+
+  if(tabla === 'medico'){
+    buscarMedicos(regex).then(medicos =>{
+      res.status(200).json({
+        ok:true,
+        medicos:medicos
+      });
+    });
+  }
+
+  if(tabla === 'hospital'){
+    buscarHospitales(regex).then(hospital =>{
+      res.status(200).json({
+        ok:true,
+        hospital:hospital
+      });
+    });
+  }
+
+});
+
+
+
+function buscarHospitales(regex){
 
     return new Promise((resolve, reject) =>{
 
@@ -42,7 +85,7 @@ function buscarHospitales(busqueda, regex){
     });
 }
 
-function buscarMedicos(busqueda, regex){
+function buscarMedicos(regex){
 
     return new Promise((resolve, reject) =>{
 
@@ -58,7 +101,7 @@ function buscarMedicos(busqueda, regex){
     });
 }
 
-function buscarUsuarios(busqueda, regex){
+function buscarUsuarios(regex){
 
     return new Promise((resolve, reject) =>{
 
