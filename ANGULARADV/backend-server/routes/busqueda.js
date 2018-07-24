@@ -67,7 +67,7 @@ app.get('/coleccion/:tabla/:busqueda',(req,res) =>{
     return res.status(400).json({
       ok:false,
       mensaje:'error en la tabla de busqueda',
-      error: {mensaje : 'Tabla no definida, solo se permite medico, usuario y hospital'}
+      errores: {mensaje : 'Tabla no definida, solo se permite medico, usuario y hospital'}
     });
   }
 });

@@ -399,6 +399,91 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "busqueda : buscar todo",
+			"request": {
+				"url": "localhost:3000/busqueda/todo/e",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "busqueda : buscar coleccion",
+			"request": {
+				"url": "localhost:3000/busqueda/coleccion/medico/e",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "upload: upload de usuarios",
+			"request": {
+				"url": "localhost:3000/upload/usuarios/5b0f21829c7620445d4e387b",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"enabled": true,
+							"src": "manun.jpg"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "upload: upload de hospital",
+			"request": {
+				"url": "localhost:3000/upload/hospital/5b0f21829c7620445d4e387b",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"enabled": true,
+							"src": "manun.jpg"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "upload: upload de medicos",
+			"request": {
+				"url": "localhost:3000/upload/medicos/5b0f21829c7620445dee387b",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imagen",
+							"type": "file",
+							"enabled": true,
+							"src": "manun.jpg"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
