@@ -38,33 +38,38 @@ app.get('/coleccion/:tabla/:busqueda',(req,res) =>{
 
   var regex = new RegExp(busqueda, 'i');
 
-  if(tabla === 'usuario'){
-    buscarUsuarios(regex).then(usuarios =>{
-      res.status(200).json({
-        ok:true,
-        usuarios:usuarios
+  switch (tabla) {
+    case 'usuario':
+      buscarUsuarios(regex).then(usuarios =>{
+        res.status(200).json({
+          ok:true,
+          [tabla]:usuarios
+        });
       });
+    break;
+    case 'medico':
+      buscarMedicos(regex).then(medicos =>{
+        res.status(200).json({
+          ok:true,
+          [tabla]:medicos
+        });
+      });
+    break;
+    case 'hospital':
+      buscarHospitales(regex).then(hospital =>{
+        res.status(200).json({
+          ok:true,
+          [tabla]:hospital
+        });
+      });
+    break;
+    default:
+    return res.status(400).json({
+      ok:false,
+      mensaje:'error en la tabla de busqueda',
+      error: {mensaje : 'Tabla no definida, solo se permite medico, usuario y hospital'}
     });
   }
-
-  if(tabla === 'medico'){
-    buscarMedicos(regex).then(medicos =>{
-      res.status(200).json({
-        ok:true,
-        medicos:medicos
-      });
-    });
-  }
-
-  if(tabla === 'hospital'){
-    buscarHospitales(regex).then(hospital =>{
-      res.status(200).json({
-        ok:true,
-        hospital:hospital
-      });
-    });
-  }
-
 });
 
 
