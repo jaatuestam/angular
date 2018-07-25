@@ -19,6 +19,7 @@
     "mongoose-unique-validator": "^2.0.1"
   },
   "devDependencies": {
+    "lite-server": "^2.4.0",
     "nodemon": "^1.17.3"
   }
 }
