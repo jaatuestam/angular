@@ -484,6 +484,28 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "imagen : traer imagen",
+			"request": {
+				"url": "localhost:3000/img/usuarios/5b0f229c9c76220445d4e3888-103.jpg",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "login:google",
+			"request": {
+				"url": "localhost:3000/login/google",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
