@@ -2,12 +2,20 @@
 
 
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import url('https://fonts.googleapis.com/css?family=K2D');
 
 html, body{
     margin: 0px;
+    font-family: 'K2D', sans-serif;
+    color: white
 }
 
 .main-container{
     margin-top: 5px;
     padding: 10px;
 }
+
+.docs-app-background {
+    background: #303030;
+}
+
