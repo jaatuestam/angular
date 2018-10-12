@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+html, body{
+    margin: 0px;
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    background: #303030;
+}
+
+.mat-toolbar{
+    font-family: 'Indie Flower', cursive;
+}
+
+.main-container{
+    padding: 1%;
+}
