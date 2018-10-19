@@ -9,22 +9,26 @@ import { MaterialModule } from './material.module';
 import { HomeComponent } from './components/home/home.component';
 import { YoutubeService } from './services/youtube.service';
 import { YoutubePipe } from './pipes/youtube.pipe';
-
+import { HttpModule } from "@angular/http";
+import { DescriptionPipe } from './pipes/description.pipe';
+import { VideoComponent } from './components/video/video.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    YoutubePipePipe,
-    YoutubePipe
+    YoutubePipe,
+    DescriptionPipe,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpModule
   ],
-  providers: [YoutubeServiceService, YoutubeService],
+  providers: [YoutubeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

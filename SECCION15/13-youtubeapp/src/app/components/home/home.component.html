@@ -1,24 +1,50 @@
 <mat-toolbar color="primary">My App</mat-toolbar>
 
 <div class="main-container">
-        <mat-card class="example-card">
-                <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
-                  <mat-card-title>Shiba Inu</mat-card-title>
-                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                  <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                    bred for hunting.
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>LIKE</button>
-                  <button mat-button>SHARE</button>
-                </mat-card-actions>
-              </mat-card>
-              
+  <h1>Canal de Mitube</h1>
+  
+  <div class="card-deck">
+
+      <div class="row">
+        <div class="col-4" *ngFor="let video of videos">
+          
+           <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>{{video.title}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="video.thumbnails.high.url" [alt]="video.title">
+            <mat-card-content>
+              <p>
+                {{video.description | description}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button (click)="verVideo(video)" mat-raised-button color="primary">Ver video</button>
+            </mat-card-actions>
+          </mat-card> 
+          
+
+
+
+          
+          
+          
+           
+          <!-- <div class="card" >
+            <img class="card-img-top" [src]="video.thumbnails.high.url" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{video.title}}</h5>
+              <p class="card-text">{{video.description | description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Publicado en {{video.publishedAt | date}}</small>
+            </div>
+            <button (click)="verVideo(video)" mat-raised-button color="primary">Ver video</button>
+          </div>
+        </div>  -->
+
+
+      </div>
+  </div>
+
 </div>

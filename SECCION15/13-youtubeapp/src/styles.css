@@ -9,10 +9,24 @@ html, body{
     background: #303030;
 }
 
-.mat-toolbar{
+.mat-toolbar,.mat-raised-button{
     font-family: 'Indie Flower', cursive;
 }
 
 .main-container{
     padding: 1%;
 }
+
+.card-text{
+    color: #303030;
+    font-size: x-small;
+}
+
+.card-title{
+    color: #303030;
+}
+
+.card-deck .card{
+    margin-bottom: 15px;
+}
+
