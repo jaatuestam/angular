@@ -12,15 +12,20 @@ import { YoutubePipe } from './pipes/youtube.pipe';
 import { HttpModule } from "@angular/http";
 import { DescriptionPipe } from './pipes/description.pipe';
 import { VideoComponent } from './components/video/video.component';
+import { DomSeguroPipe } from './dom-seguro.pipe';
 
 
 @NgModule({
+  entryComponents:[
+    VideoComponent
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
     YoutubePipe,
     DescriptionPipe,
-    VideoComponent
+    VideoComponent,
+    DomSeguroPipe
   ],
   imports: [
     BrowserModule,

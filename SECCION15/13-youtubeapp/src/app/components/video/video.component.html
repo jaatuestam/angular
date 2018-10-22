@@ -1,3 +1,11 @@
-<p>
-  video works!
-</p>
+<div >
+  <div >
+    <h5>{{titulo}}</h5>
+  </div>
+  <div >
+    <iframe width="560" height="325" [src]="codigo|domSeguro" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div >
+    <button (click)="onNoClick()" type="button" class="btn btn-primary">Cerrar</button>
+  </div>
+</div>

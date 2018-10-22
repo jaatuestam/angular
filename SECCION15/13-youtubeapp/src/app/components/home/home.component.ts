@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { YoutubeService } from '../../services/youtube.service';
+import {MatDialog, MatDialogRef} from '@angular/material';
+import { VideoComponent } from '../video/video.component';
 
 @Component({
   selector: 'app-home',
@@ -20,18 +22,40 @@ export class HomeComponent implements OnInit {
 
   private videos : any[]= []
 
-  constructor(public youtubeService:YoutubeService) {
+  constructor(public youtubeService:YoutubeService,public dialog: MatDialog) {
+    
+    
+    
     this.youtubeService.getVideos().subscribe(videos => {
-      console.log(videos);
       this.videos = videos;      
     });
+
+
+
    }
 
   ngOnInit() {
   }
 
+  cargarMas(){
+    this.youtubeService.getVideos().subscribe(videos => {
+      this.videos.push.apply(this.videos,videos);      
+    });
+  }
+
   verVideo(video:any){
     console.log(video);
+    
+    const dialogRef = this.dialog.open(VideoComponent, {
+      width: '640px',
+      height: '430px',
+      data: {titulo: video.title, codigo : video.resourceId.videoId}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      video = null;
+    });
     
   }
 

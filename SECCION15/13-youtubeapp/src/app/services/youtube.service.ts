@@ -8,7 +8,7 @@ export class YoutubeService {
 
   private youtubeUrl:string = "https://www.googleapis.com/youtube/v3";
   private playlist ="UU_x5XG1OV2P6uZZ5FSM9Ttw";
-  private apiKey = "AIzaSyAXnlKnqhGkMsyhlztpQNx5Xsa-cU44oGQ";
+  private apiKey = "";
   private nextPageToken = "";
 
   constructor(public http: Http) { }
@@ -20,6 +20,9 @@ export class YoutubeService {
     params.set('maxResults','12');
     params.set('playlistId',this.playlist);
     params.set('key',this.apiKey);
+    if(this.nextPageToken){
+      params.set('pageToken',this.nextPageToken);
+    }
     let url = `${this.youtubeUrl}/playlistItems`;
     return this.http.get(url, {search : params})
           .map(res =>{
