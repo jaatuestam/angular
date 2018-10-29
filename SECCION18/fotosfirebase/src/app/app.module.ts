@@ -11,12 +11,14 @@ import { FotosComponent } from './components/fotos/fotos.component';
 import { CargaComponent } from './components/carga/carga.component';
 import { APP_ROUTES } from './app.routes';
 import { CargaImagenesService } from './services/carga-imagenes.service';
+import { NgDroFileDirective } from './directives/ng-dro-file.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FotosComponent,
-    CargaComponent
+    CargaComponent,
+    NgDroFileDirective
   ],
   imports: [
     BrowserModule,
