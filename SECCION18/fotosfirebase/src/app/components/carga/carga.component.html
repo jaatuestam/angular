@@ -3,7 +3,8 @@
   <div class="col-md-4">
     <h3>Seleccione archivos</h3>
 
-    <div appNgDroFile (mouseSobre) = "estaSobreDrop = $event" [ngClass]="{'file-over': estaSobreDrop}" class="well drop-zone">
+    <div appNgDroFile [archivos] = "archivos"
+            (mouseSobre) = "estaSobreDrop = $event" [ngClass]="{'file-over': estaSobreDrop}" class="well drop-zone">
       <h5>deje caer aqui los archivos</h5>
       <img src="assets/img/drop-images.png" >
     </div>
