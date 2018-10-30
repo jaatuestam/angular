@@ -1,8 +1,8 @@
 export class FileItem{
     public archivo :File;
-    public nombreArchivo:String;
+    public nombreArchivo:string;
     public cargando : boolean;
-    public url : String;
+    public url : string;
     public progreso : number;
 
     constructor(archivo:File){

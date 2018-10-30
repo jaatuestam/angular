@@ -50,7 +50,7 @@ export class NgDroFileDirective {
 
       }
     }
-    console.log("arreglo", this.archivos);
+    // console.log("arreglo", this.archivos);
 
     
     
