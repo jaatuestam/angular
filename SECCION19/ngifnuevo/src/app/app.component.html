@@ -1,0 +1,14 @@
+<ng-container *ngIf="usuario; then thenTemplate; else elseTemplate"></ng-container>
+<ng-template #thenTemplate>
+  Bienvenido {{usuario}}
+  <br>
+  <button type="button" (click)="usuario = ''" class="btn btn-outline-danger">Logout</button>
+</ng-template>
+<ng-template #elseTemplate>
+ 
+  Por favor ingrese
+  <br>
+  <button type="button" (click)="usuario = 'Jorge'" class="btn btn-outline-primary">Ingresar</button>
+</ng-template>
+
+
