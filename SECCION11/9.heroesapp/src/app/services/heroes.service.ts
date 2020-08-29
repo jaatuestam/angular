@@ -6,7 +6,7 @@ import  'rxjs/Rx';
 @Injectable()
 export class HeroesService {
 
-  heroesURL : string = "https://heroesapp-7328f.firebaseio.com/Heroes.json";
+  heroesURL : string = "https://heroesapp-7328f.firebase.com/Heroes.json";
   heroeURL : string = "https://heroesapp-7328f.firebaseio.com/Heroes/";
 
   constructor(private http:Http) { }

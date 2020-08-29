@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(){
+	console.log('entro constructor');
+	window.console.error = (errorMsg, url, lineNumber) => {
+		alert("Error occured: " + errorMsg);//or any message
+		console.log('error ' , errorMsg);
+		
+		return false;
+	}
+  }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ResponseContentType } from '@angular/http/src/enums';
 
 @Component({
   selector: 'app-heroes',
@@ -21,6 +23,10 @@ export class HeroesComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  downloadPDF(): any {
+    window.open('http://localhost:8080/downloadPDF','_blank');
   }
 
   eliminarHeroe(key$:string){
