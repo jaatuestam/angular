@@ -19,6 +19,14 @@ export class SidebarService {
           ruta : 'progress'
         },
         {
+          titulo : 'Promesas',
+          ruta : 'promesas'
+        },
+        {
+          titulo : 'Rxjs',
+          ruta : 'rxjs'
+        },
+        {
           titulo : 'Graficas',
           ruta : 'grafica1'
         }
